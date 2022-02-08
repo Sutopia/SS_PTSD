@@ -1,0 +1,11 @@
+{
+    "id": "su_PTSD",
+    "name": "Phase Temporal Shunt Device",
+    "author": "Sutopia",
+    "utility": "false",
+    "version": "0.1a",
+    "description": "An alternative phase play",
+    "gameVersion": "0.95.1a-RC6",
+    "jars": ["jar/PTSD.jar"],
+	"replace":["data/shipsystems/phasecloak.system"],
+}

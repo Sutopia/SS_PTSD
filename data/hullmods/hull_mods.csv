@@ -1,0 +1,6 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sprite
+Phase Temporal Shunt Device,su_phase_ptsd,0,,,phase,Phase,,TRUE,,,0,0,0,0,org.sutopia.starsector.mod.ptsd.TemporalShunt,"Cancel time dilation of phase ship to relieve pressure on phase coils.
+Apply zero flux speed bonus when phased. 
+
+Hard flux level below %s no longer affects ship performace. 
+High hard flux level reduces zero flux speed bonus instead of max speed, up to complete nullification of zero flux speed bonus at maximum pressure.","PTSD",graphics/phase_temporal_shunt.png
