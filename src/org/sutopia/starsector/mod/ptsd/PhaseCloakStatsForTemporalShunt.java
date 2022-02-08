@@ -5,6 +5,7 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.PhaseCloakSystemAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipSystemAPI;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.combat.PhaseCloakStats;
 
@@ -140,6 +141,7 @@ public class PhaseCloakStatsForTemporalShunt extends PhaseCloakStats {
 	
 	public float getZeroFluxSpeedMult(ShipAPI ship, float effectLevel) {
 		if (getDisruptionLevel(ship) <= 0f) return 1f;
+		if (ship.getVariant().hasHullMod(HullMods.SAFETYOVERRIDES)) return 1f;
 		return Math.max(0f, 1f - getDisruptionLevel(ship) * effectLevel); 
 	}
 	
