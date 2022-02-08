@@ -3,7 +3,7 @@
     "name": "Phase Temporal Shunt Device",
     "author": "Sutopia",
     "utility": "false",
-    "version": "0.2a",
+    "version": "0.3a",
     "description": "An alternative phase play",
     "gameVersion": "0.95.1a-RC6",
     "jars": ["jar/PTSD.jar"],

@@ -124,6 +124,7 @@ public class PhaseCloakStatsForTemporalShunt extends PhaseCloakStats {
 	
 	@Override
 	protected float getDisruptionLevel(ShipAPI ship) {
+		if (ship.getVariant().hasHullMod(HullMods.SAFETYOVERRIDES)) return 0f;
 		if (FLUX_LEVEL_AFFECTS_SPEED) {
 			float threshold = ship.getMutableStats().getDynamic().getMod(
 					Stats.PHASE_CLOAK_FLUX_LEVEL_FOR_MIN_SPEED_MOD).computeEffective(BASE_FLUX_LEVEL_FOR_MIN_SPEED);
@@ -141,7 +142,6 @@ public class PhaseCloakStatsForTemporalShunt extends PhaseCloakStats {
 	
 	public float getZeroFluxSpeedMult(ShipAPI ship, float effectLevel) {
 		if (getDisruptionLevel(ship) <= 0f) return 1f;
-		if (ship.getVariant().hasHullMod(HullMods.SAFETYOVERRIDES)) return 1f;
 		return Math.max(0f, 1f - getDisruptionLevel(ship) * effectLevel); 
 	}
 	
